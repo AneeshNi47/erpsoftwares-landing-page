@@ -8,7 +8,7 @@
   </url>
 
   <url>
-    <loc>https://www.erpsoftwares.ae/about-us</loc>
+    <loc>https://www.erpsoftwares.ae/about</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -20,7 +20,19 @@
   </url>
 
   <url>
-    <loc>https://www.erpsoftwares.ae/contact-us</loc>
+    <loc>https://www.erpsoftwares.ae/industries</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.erpsoftwares.ae/pricing</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.erpsoftwares.ae/contact</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
