@@ -430,6 +430,136 @@
   .why-grid { grid-template-columns: 1fr; }
 }
 
+/* ---------- Locations Mega Menu ---------- */
+.nav-has-dropdown { position: relative; }
+
+.nav-dropdown-trigger {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  cursor: pointer;
+}
+
+.nav-mega-menu {
+  position: absolute;
+  top: calc(100% + 1rem);
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(2,6,23,0.97);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 1.25rem;
+  padding: 1.75rem;
+  display: none;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  min-width: 680px;
+  box-shadow: 0 24px 60px rgba(0,0,0,0.5), 0 0 40px rgba(34,211,238,0.05);
+  z-index: 200;
+}
+
+.nav-has-dropdown:hover .nav-mega-menu { display: grid; }
+
+.nav-mega-col { display: flex; flex-direction: column; gap: 0.35rem; }
+
+.nav-mega-emirate {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #22d3ee !important;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.4rem 0.6rem;
+  border-radius: 0.5rem;
+  margin-top: 0.5rem;
+  background: rgba(34,211,238,0.08);
+}
+
+.nav-mega-emirate:first-child { margin-top: 0; }
+
+.nav-mega-col a:not(.nav-mega-emirate) {
+  font-size: 0.8rem;
+  color: #cbd5e1 !important;
+  padding: 0.25rem 0.6rem;
+  border-radius: 0.4rem;
+  transition: color 0.15s, background 0.15s;
+}
+
+.nav-mega-col a:not(.nav-mega-emirate):hover {
+  color: white !important;
+  background: rgba(255,255,255,0.06);
+}
+
+/* ---------- Breadcrumb ---------- */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  color: #64748b;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.breadcrumb a { color: #22d3ee; text-decoration: none; }
+.breadcrumb a:hover { color: white; }
+.breadcrumb span { color: #475569; }
+
+/* ---------- UAE Coverage Section (home page) ---------- */
+.uae-emirates-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  max-width: 72rem;
+  margin: 0 auto;
+}
+
+.emirate-card {
+  background: rgba(255,255,255,0.04);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 1.25rem;
+  padding: 1.5rem;
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+  text-decoration: none;
+}
+
+.emirate-card:hover {
+  border-color: rgba(34,211,238,0.3);
+  box-shadow: 0 12px 40px rgba(34,211,238,0.1);
+  transform: translateY(-4px);
+}
+
+.emirate-card-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 0.75rem;
+}
+
+.emirate-card-areas {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.emirate-card-areas a {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  text-decoration: none;
+  padding: 0.15rem 0;
+  transition: color 0.15s;
+}
+
+.emirate-card-areas a:hover { color: #22d3ee; }
+
+@media (max-width: 1024px) { .uae-emirates-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px)  { .uae-emirates-grid { grid-template-columns: 1fr; } }
+
+@media (max-width: 900px) {
+  .nav-mega-menu { display: none !important; }
+}
+
 /* ---------- Contact Form (centered card) ---------- */
 .contact-form-center {
   max-width: 48rem;
