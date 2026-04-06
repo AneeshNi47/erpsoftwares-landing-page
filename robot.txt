@@ -1,4 +1,64 @@
+# robots.txt for https://www.erpsoftwares.ae/
+# Generated: 2026-04-06
+# Brocode Solutions — ERPNext Partner UAE
+
+# -------------------------------------------------------
+# Allow all well-behaved crawlers
+# -------------------------------------------------------
 User-agent: *
 Allow: /
 
+# Block admin, backend, and private areas
+Disallow: /admin/
+Disallow: /login/
+Disallow: /api/
+Disallow: /private/
+Disallow: /wp-admin/
+Disallow: /wp-login.php
+
+# Block form submission confirmation pages (no SEO value)
+Disallow: /*?*submitted=*
+Disallow: /*?*success=*
+Disallow: /*?*thank*
+
+# Block duplicate/parameterised URLs that don't add content
+Disallow: /*?*utm_*
+Disallow: /*?*ref=*
+Disallow: /*?*source=*
+
+# Block internal search results if applicable
+Disallow: /search/
+Disallow: /?s=*
+
+# -------------------------------------------------------
+# AI training crawlers — disallow by default
+# (remove any you're happy to permit)
+# -------------------------------------------------------
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: Omgilibot
+Disallow: /
+
+User-agent: FacebookBot
+Disallow: /
+
+# -------------------------------------------------------
+# Sitemap location
+# -------------------------------------------------------
 Sitemap: https://www.erpsoftwares.ae/sitemap.xml
